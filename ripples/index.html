@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ripples</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header id="header-ripple"></header>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="jquery.ripples-min.js"></script>
+	<script>
+		$(function(){
+			$('#header-ripple').ripples({
+			    resolution: 256,
+				dropRadius: 25,
+				perturbance: 0.04
+			});
+		});
+	</script>
+</body>
+</html>

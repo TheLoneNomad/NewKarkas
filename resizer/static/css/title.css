@@ -1,0 +1,109 @@
+.tooltip-left {
+    /*border-bottom: 1px dotted #000000; color: #000000; outline: none;*/
+    cursor: pointer; text-decoration: none;
+    position: relative;
+}
+.tooltip-left span {
+    margin-left: -999em;
+    position: absolute;
+    color: #fafafa;                 /* Цвет текста */
+    padding:10px;                   /* Отступы */
+    -webkit-border-radius: 5px;     /* Закругляем уголки */
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tooltip-left:hover span {
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: Calibri, Tahoma, Geneva, sans-serif;
+    position: absolute; left: 1em; top: 2em; z-index: 99;
+    margin-left: -200px; width: 250px;
+}
+
+.tooltip-left:hover span:after{
+    content: '';                            /* Добавили контент */
+    width:0;                                /* Спрятали его, превратив в 0 */
+    height:0;
+    border-bottom: 10px solid rgba(0,0,0,0.25);      /* Нижним бордером задаем цвет и высоту треугольника */
+    border-left: 50px solid transparent;    /* Левым - ширину треугольника влево */
+    position: absolute;                     /* Позиционируем относительно родительского блока */
+    top:-10px;
+    right:20px;
+}
+
+.tooltip-left:hover em {
+    font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
+    display: block; padding: 0.2em 0 0.6em 0;
+}
+
+.tooltip-right {
+    /*border-bottom: 1px dotted #000000; color: #000000; outline: none;*/
+    cursor: pointer; text-decoration: none;
+    position: relative;
+}
+.tooltip-right span {
+    margin-left: -999em;
+    position: absolute;
+    color: #fafafa;                 /* Цвет текста */
+    padding:10px;                   /* Отступы */
+    -webkit-border-radius: 5px;     /* Закругляем уголки */
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tooltip-right:hover span {
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: Calibri, Tahoma, Geneva, sans-serif;
+    position: absolute; left: 1em; top: 2em; z-index: 99;
+    margin-left: 0; width: 250px;
+}
+
+.tooltip-right:hover span:after{
+    content: '';                                        /* Добавили контент */
+    width:0;                                            /* Спрятали его, превратив в 0 */
+    height:0;
+    border-bottom: 10px solid rgba(0,0,0,0.45);         /* Нижним бордером задаем цвет и высоту треугольника */
+    border-right: 50px solid transparent;               /* Правым - ширину треугольника вправо */
+    position: absolute;                                 /* Позиционируем относительно родительского блока */
+    top:-10px;
+    left:10px;
+}
+
+.tooltip-right:hover em {
+    font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
+    display: block; padding: 0.2em 0 0.6em 0;
+}
+
+.classic { padding: 0.8em 1em; }
+.custom { padding: 0.5em 0.8em 0.8em 2em; }
+* html a:hover { background: transparent; }
+
+.classic {
+    background: rgb(0,2,20);
+    background: linear-gradient(145deg, rgba(0,2,20,0.5018382352941176) 0%, rgba(105,95,0,0.5046393557422969) 50%, rgba(193,149,0,0.5046393557422969) 100%);
+    border: 1px solid #695F00;
+}
+.critical {
+    background: rgb(0,2,20);
+    background: linear-gradient(145deg, rgba(0,2,20,0.85) 0%, rgba(105, 0, 0,0.85) 50%, rgba(193,0,0,0.85) 100%);
+    border: 1px solid #690000;
+}
+.help {
+    background: rgb(0,2,20);
+    background: linear-gradient(145deg, rgba(0,2,20,0.85) 0%, rgba(1,6,59,0.85) 50%, rgba(0,12,99,0.85) 100%);
+    border: 1px solid #002028;
+}
+.info {
+    background: rgb(0,2,20);
+    background: linear-gradient(145deg, rgba(0,2,20,0.85) 0%, rgba(1,6,59,0.85) 50%, rgba(0,12,99,0.85) 100%);
+    border: 1px solid #002028;
+}
+.warning {
+    background: rgb(0,2,20);
+    background: linear-gradient(145deg, rgba(0,2,20,0.85) 0%, rgba(105,95,0,0.85) 50%, rgba(193,149,0,0.85) 100%);
+    border: 1px solid #695F00;
+}

@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #717171;
+}
+
+/* Main parent can be given different dimensions */
+
+#module {
+    height: 100vh;
+    background: #7b7b7b;
+    box-shadow: 1px 0 5px #363636;
+    overflow: hidden;
+}
+
+.panel {
+    height: calc((100% - 20px) / 3);
+    position: relative;
+}
+
+.axial {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.spill {
+    min-height: 50px;
+}
+
+/* Place your content inside element below */
+/* Adapt padding equally */
+/* Second item requires 12px on the right */
+/* Best to leave style unaltered otherwise */
+
+.bulk {
+    position: relative;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.bulk.way {
+    padding: 1px 1px 1px 1px;
+}
+
+/* Scrollbars */
+
+.route {
+    width: 1px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.route div {
+    position: relative;
+    background: rgb(2,2,154);
+    background: linear-gradient(90deg, rgba(2,2,154,0.9023984593837535) 0%, rgba(54,54,54,0.896796218487395) 50%, rgba(2,2,154,1) 100%);
+    border: 3px solid transparent;
+    border-radius: 20px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+}
+
+.route-protocol{
+    width: 12px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.route-protocol div {
+    position: relative;
+    background: rgb(2,2,154);
+    background: linear-gradient(90deg, rgba(2,2,154,0.9023984593837535) 0%, rgba(54,54,54,0.896796218487395) 50%, rgba(2,2,154,1) 100%);
+    border: 3px solid transparent;
+    border-radius: 20px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+}
+
+.latent {
+    visibility: hidden;
+}
+
+/* Draggable separators */
+
+.handle {
+    height: 10px;
+    background: rgb(77,76,76);
+    background: linear-gradient(180deg, rgba(77,76,76,1) 0%, rgba(0,0,0,1) 50%, rgba(77,76,76,1) 100%);
+    border-top: 2px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+
+/* Cosmetic style beyond this point */
+
+.drag {
+    text-align: center;
+    cursor: row-resize;
+}
+
+.drag:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.drag:nth-child(2):after {
+    border-top: 3px solid #5e5e5e;
+    border-right: 3px solid #5e5e5e;
+}
+
+.drag:nth-child(4):after {
+    position: relative;
+    top: -3px;
+    border-bottom: 3px solid #5e5e5e;
+    border-left: 3px solid #5e5e5e;
+}
+
+/* Circumstantial content */
+/* Preferably style these instead of parent */
+
+p {
+    text-align: center;
+    font-family: times;
+    color: #f0ead6;
+    padding: 10px 0 0;
+}
+
+img {
+    width: 300px;
+    max-width: 90%;
+    display: block;
+    padding-top: 20px;
+    margin: auto;
+}
+
+img:last-child {
+    padding-bottom: 20px;
+}
+
+p:last-child {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+}
